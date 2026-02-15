@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace api.Dto
 {
-    public class BookResponseDto
+    public class BookResponseDto //Respressents the API response structure(data back to the client)
     {
     public int Id { get; set; }   
 

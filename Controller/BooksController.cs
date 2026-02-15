@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controller
 {
-    [ApiController]
-    [Route("api/[controller]")]
+    [ApiController] // mark this class as an API controller
+    [Route("api/[controller]")] // route for this controller
     public class BooksController : ControllerBase
     {
-        private readonly IBookService _service;
+        private readonly IBookService _service; //service layer abstraction to handle busineess logic
 
-        public BooksController(IBookService service)
+        public BooksController(IBookService service) // dependency Injection 
         {
             _service = service;
         }

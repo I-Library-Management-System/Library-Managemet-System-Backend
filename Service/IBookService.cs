@@ -6,7 +6,7 @@ using api.Dto;
 
 namespace api.Service
 {
-    public interface IBookService
+    public interface IBookService // This abstraction allows the controller to depend on an interface
     {
         Task<IEnumerable<BookResponseDto>> GetAllAsync();
         Task<BookResponseDto?> GetByIdAsync(int id);

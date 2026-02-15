@@ -7,15 +7,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext // Responsible for managing entity objects and excuting queries
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) // constructor receives DBcontext configuration options.
         :base(options)
         {
             
         }
 
-        public DbSet<Book> Books {get; set;}
+        public DbSet<Book> Books {get; set;} //Ef core maps this Dbset to the "Book" table.
         
     }
 }

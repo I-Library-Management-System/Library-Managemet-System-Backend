@@ -11,10 +11,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Service
 {
-    public class BookService : IBookService
+    public class BookService : IBookService // service layer responsible for business logic.hable mapping,and presistens and data sccess.
     {
 
-        private readonly AppDbContext _context;
+        private readonly AppDbContext _context; //database conntext injected
         public BookService(AppDbContext context)
         {
             _context = context;

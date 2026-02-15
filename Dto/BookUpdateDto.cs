@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace api.Dto
 {
-    public class BookUpdateDto
+    public class BookUpdateDto // represent the data the client is a allowed to modify.
     {
      [Required]
      [MaxLength(200)]

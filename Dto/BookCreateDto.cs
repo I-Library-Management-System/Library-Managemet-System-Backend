@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace api.Dto
 {
-    public class BookCreateDto
+    public class BookCreateDto //Represent the data expected from the client in a post request.
     {
-    [Required]
+    [Required] //data Validation(this property must have a value)
     [MaxLength(200)]
      public string Title { get; set; } = string.Empty;
 

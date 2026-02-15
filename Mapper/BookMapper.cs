@@ -7,9 +7,9 @@ using api.Model;
 
 namespace api.Mapper
 {
-    public class BookMapper
+    public class BookMapper // responsibel for transfroming DTOs
     {
-        public static Book ToEntity(BookCreateDto dto)
+        public static Book ToEntity(BookCreateDto dto) // converting DTO into Entity
         {
             return new Book
             {
@@ -20,7 +20,7 @@ namespace api.Mapper
             };
         }
 
-        public static BookResponseDto ToResponseDto(Book book)
+        public static BookResponseDto ToResponseDto(Book book) // converting entity into DTO
         {
             return new BookResponseDto
             {
@@ -32,7 +32,7 @@ namespace api.Mapper
             };
         }
 
-        public static void UpdateEntity(Book book , BookUpdateDto bookUpdateDto)
+        public static void UpdateEntity(Book book , BookUpdateDto bookUpdateDto) // update an exsisting book entity using value from bookUpdateDto.
         {
             book.Title = bookUpdateDto.Title;
             book.Author = bookUpdateDto.Author;
